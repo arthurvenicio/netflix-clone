@@ -7,6 +7,13 @@ export const ContainerH = styled.div`
     url(${background});
   background-repeat: no-repeat;
   background-clip: padding-box;
+
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 export const Header = styled.header`
@@ -25,6 +32,11 @@ export const Header = styled.header`
 export const Logo = styled.img`
   width: 11rem;
   height: 10rem;
+  transition: filter 500ms;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 export const Languages = styled.select`
@@ -69,4 +81,75 @@ export const Footer = styled.footer`
   width: 100%;
   height: 30rem;
   background: black;
+`;
+
+export const InfoBox = styled.div`
+  width: 40rem;
+  height: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  & h1 {
+    width: 35rem;
+    text-align: center;
+    font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+  }
+  & h2 {
+    font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & p {
+      font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    &.email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & input {
+      width: 26.75rem;
+      height: 3rem;
+      padding: 1rem;
+
+      font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.3rem;
+    }
+
+    & button {
+      background: #e50914;
+      width: 8.125rem;
+      height: 3rem;
+
+      border: none;
+      color: #fff;
+
+      font-size: 1.4rem;
+    }
+  }
 `;
